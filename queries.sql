@@ -4,11 +4,11 @@ SELECT * FROM animals; ---> to check whrther the updated item changed or not
 
 SELECT * FROM animals WHERE Name like '%mon';
 
-SELECT * FROM animals WHERE Date_of_birth >= '2016-02-25' AND Date_of_birth <= '2019-02-27';
+SELECT * FROM animals WHERE Date_of_birth >= '2016-01-01' AND Date_of_birth <= '2019-12-31';
 
 SELECT * FROM animals WHERE Escape_attempts > 3 AND Neutered = 'true';
 
-SELECT * FROM animals WHERE Name = 'Agumon' OR Name = 'Pikachu';
+SELECT Date_of_birth FROM animals WHERE Name = 'Agumon' OR Name = 'Pikachu';
 
 SELECT Name, Escape_attempts FROM animals WHERE weight_kg > 10.5;
 
