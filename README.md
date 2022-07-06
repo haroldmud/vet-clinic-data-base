@@ -1,8 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
-
-> Vet clinic database.
+# Vet clinic database.
 
 
 ## Built With
