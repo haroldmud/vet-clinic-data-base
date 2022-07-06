@@ -1,6 +1,20 @@
+ALTER TABLE animals DROP COLUMN ID; -----> deletes a specific column(ID)
+
+ALTER TABLE animals ADD ID SERIAL PRIMARY KEY;
+
+ALTER DATABASE vet_clinic DROP TABLE animals; ------> deletes the database's table animals
+
+ALTER TABLE animals 
+
+UPDATE animals SET Species = 'Unspecified'; ----> sets all the species column valuesf to unspecified
+
+UPDATE animals SET Neutered = 'false' WHERE Name = 'Squirtle'; 
+
+UPDATE animals SET Date_of_birth = '2005-06-12' WHERE Name = 'Angemon';
 
 UPDATE animals SET Neutered = 'false' WHERE Name = 'Pikachu'; -----> this is a request
-SELECT * FROM animals; ---> to check whrther the updated item changed or not
+
+SELECT * FROM animals; ---> to check whether the updated item changed or not
 
 SELECT * FROM animals WHERE Name like '%mon';
 
