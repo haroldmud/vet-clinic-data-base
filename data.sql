@@ -101,4 +101,4 @@ SELECT owner.full_name, animals.name FROM animals INNER JOIN owner ON owner.full
 SELECT species.name, animals.name FROM animals INNER JOIN species ON species.name = animals.species_id WHERE species.name='Pokemon';
 SELECT owner.full_name, animals.name FROM animals INNER JOIN owner ON owner.full_name = animals.owner_id;
 SELECT COUNT(*) FROM animals WHERE species_id = 'Pokemon';
-SELECT COUNT(*) FROM animals WHERE species_id = 'Digimon';
+-- SELECT COUNT(*) FROM animals WHERE species_id = 'Digimon';
