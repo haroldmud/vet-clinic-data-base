@@ -1,25 +1,3 @@
-ALTER TABLE animals DROP COLUMN ID; -----> deletes a specific column(ID)
-
-ALTER TABLE animals ADD ID SERIAL PRIMARY KEY;
-
-ALTER TABLE animals 
-
-UPDATE animals SET Species = 'Unspecified'; ----> sets all the species column valuesf to unspecified
-
-UPDATE animals SET Neutered = 'false' WHERE Name = 'Squirtle'; 
-
-UPDATE animals SET Date_of_birth = '2005-06-12' WHERE Name = 'Angemon';
-
-UPDATE animals SET Neutered = 'false' WHERE Name = 'Pikachu'; -----> this is a request
-
-UPDATE animals SET Species = 'digimon' WHERE Name like '%mon'; ----> Update the animals table by setting the species column to digimon for all animals that have a name ending in mon.
-
-UPDATE animals SET Species = 'pokemon' WHERE Species = 'Unspecified'; ----> Update the animals table by setting the species column to pokemon for all animals that don't have species already set.
-
-UPDATE animals SET Weight_kg = Weight_kg * -1;
-
-UPDATE animals SET Weight_kg = Weight_kg * -1 WHERE Weight_kg < 0 ;
-
 SELECT * FROM animals; ---> to check whether the updated item changed or not
 
 SELECT * FROM animals WHERE Name like '%mon';
@@ -57,3 +35,5 @@ SELECT Name, Escape_attempts, Neutered FROM animals WHERE Escape_attempts = ( SE
 SELECT Name, weight_kg FROM animals WHERE weight_kg = ( SELECT MAX(weight_kg) FROM animals ) AND weight_kg = ( SELECT MIN(weight_kg) FROM animals );
 
 SELECT AVG( Escape_attempts ) AS escape_Average FROM animals WHERE Date_of_birth >= '1990-01-01' AND Date_of_birth <= '2000-01-01';
+
+SELECT animals.owner_id FROM animals INNER JOIN owner ON animals.owner_id = owner.full_name GROUP BY owner_id ORDER BY COUNT(*) DESC LIMIT 1;
