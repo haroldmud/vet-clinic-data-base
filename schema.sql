@@ -6,9 +6,8 @@ ALTER TABLE animals ADD ID SERIAL PRIMARY KEY;
 
 ALTER TABLE animals ADD Species varchar(100);
 ALTER TABLE animals DROP COLUMN species;
-ALTER TABLE animals ADD COLUMN species_id varchar(100);
-
-ALTER TABLE animals ADD COLUMN owner_id varchar(100);
+ALTER TABLE species ADD CONSTRAINT ID INT FOREIGN KEY ( name ) REFERENCES animals(species_id);
+ALTER TABLE owner ADD CONSTRAINT ID INT FOREIGN KEY ( full_name ) REFERENCES animals(owner_id);
 
 -----OWNER TABLE----
 CREATE TABLE owner ( ID int, Full_name varchar(100), Age int, PRIMARY KEY (ID)  );

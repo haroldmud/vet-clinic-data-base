@@ -93,12 +93,12 @@ VALUES ( 1, 'Pokemon' );
 
 INSERT INTO species ( ID, Name )
 VALUES ( 2, 'Digimon' );
+SELECT COUNT(*) FROM animals WHERE species_id = 'Pokemon';
+SELECT COUNT(*) FROM animals WHERE species_id = 'Digimon';
 
 
 ----INNER JOIN----
 
 SELECT owner.full_name, animals.name FROM animals INNER JOIN owner ON owner.full_name = animals.owner_id WHERE owner.full_name='Melody Pond';
-SELECT species.name, animals.name FROM animals INNER JOIN species ON species.name = animals.species_id WHERE species.name='Pokemon';
+SELECT species.name, animals.name FROM animals INNER JOIN species ON species.id = animals.species_id WHERE species.name='Pokemon';
 SELECT owner.full_name, animals.name FROM animals INNER JOIN owner ON owner.full_name = animals.owner_id;
-SELECT COUNT(*) FROM animals WHERE species_id = 'Pokemon';
-SELECT COUNT(*) FROM animals WHERE species_id = 'Digimon';
