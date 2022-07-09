@@ -37,3 +37,4 @@ SELECT Name, weight_kg FROM animals WHERE weight_kg = ( SELECT MAX(weight_kg) FR
 SELECT AVG( Escape_attempts ) AS escape_Average FROM animals WHERE Date_of_birth >= '1990-01-01' AND Date_of_birth <= '2000-01-01';
 
 SELECT animals.owner_id FROM animals INNER JOIN owner ON animals.owner_id = owner.full_name GROUP BY owner_id ORDER BY COUNT(*) DESC LIMIT 1;
+
