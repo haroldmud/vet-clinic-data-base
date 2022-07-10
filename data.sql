@@ -97,13 +97,6 @@ SELECT COUNT(*) FROM animals WHERE species_id = 'Pokemon';
 SELECT COUNT(*) FROM animals WHERE species_id = 'Digimon';
 
 
-----INNER JOIN-----
-
-SELECT owner.full_name, animals.name FROM animals INNER JOIN owner ON owner.id = animals.owner_id WHERE owner.full_name='Melody Pond';
-SELECT species.name, animals.name FROM animals INNER JOIN species ON species.id = animals.species_id WHERE species.name='Pokemon';
-SELECT owner.full_name, animals.name FROM animals INNER JOIN owner ON owner.full_name = animals.owner_id;
-
-
 
 INSERT INTO vets (name, age, date_of_graduation) 
 VALUES ('William Tatcher', 45, '2000-4-23');

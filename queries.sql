@@ -61,3 +61,10 @@ SELECT animals.name, visits.vet, visits.visit_date FROM animals INNER JOIN visit
 SELECT COUNT(*) FROM visits INNER JOIN specializations ON specializations.vet_name = visits.vet WHERE species = 'Pokemon' AND animal NOT LIKE '%mon';
 
 SELECT * FROM visits GROUP BY animal ORDER BY COUNT(*) DESC LIMIT 1;
+
+----INNER JOIN-----
+
+SELECT owner.full_name, animals.name FROM animals INNER JOIN owner ON owner.id = animals.owner_id WHERE owner.full_name='Melody Pond';
+SELECT species.name, animals.name FROM animals INNER JOIN species ON species.id = animals.species_id WHERE species.name='Pokemon';
+SELECT owner.full_name, animals.name FROM animals INNER JOIN owner ON owner.full_name = animals.owner_id;
+
