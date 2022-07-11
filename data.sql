@@ -98,6 +98,7 @@ SELECT COUNT(*) FROM animals WHERE species_id = 'Digimon';
 
 
 
+
 INSERT INTO vets (name, age, date_of_graduation) 
 VALUES ('William Tatcher', 45, '2000-4-23');
 
