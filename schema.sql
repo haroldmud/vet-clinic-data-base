@@ -18,3 +18,13 @@ CREATE TABLE owner ( ID int, Full_name varchar(100), Age int, PRIMARY KEY (ID)  
 CREATE TABLE species ( ID INT, Name VARCHAR(100), PRIMARY KEY (ID));
 ALTER TABLE species DROP COLUMN ID;
 ALTER TABLE species ADD ID SERIAL PRIMARY KEY;
+
+
+CREATE TABLE vets (id SERIAL PRIMARY KEY, name varchar(100), age int, date_of_graduation date);
+
+CREATE TABLE specializations (id SERIAL PRIMARY KEY, vet_name varchar(100));
+ALTER TABLE specializations ADD species varchar(100);
+
+CREATE TABLE visits (id SERIAL PRIMARY KEY, animal varchar(100), vet varchar(100), visit_date date);
+
+ALTER TABLE animals ADD vet_id varchar(100);
