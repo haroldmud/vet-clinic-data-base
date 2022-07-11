@@ -25,6 +25,6 @@ CREATE TABLE vets (id SERIAL PRIMARY KEY, name varchar(100), age int, date_of_gr
 CREATE TABLE specializations (id SERIAL PRIMARY KEY, vet_name varchar(100));
 ALTER TABLE specializations ADD species varchar(100);
 
-CREATE TABLE visits (id SERIAL PRIMARY KEY, animal varchar(100), vet varchar(100), visit_date date);
+CREATE TABLE visits (id SERIAL PRIMARY KEY, animal varchar(100), vet varchar(100), visit_date date, animals_id INT, vets_id, CONSTRAINT fk_visit_animals FOREIGN KEY(animals_id) REFERENCES animals(ID), CONSTRAINT fk_vets FOREIGN KEY(vets_id) REFERENCES vets(id) );
 
 ALTER TABLE animals ADD vet_id varchar(100);
