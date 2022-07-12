@@ -39,14 +39,16 @@ INSERT INTO visits (animal_id, vet_id, date_of_visit) SELECT * FROM (SELECT id F
 insert into owners (full_name, email) select 'Owner ' || generate_series(1,2500000), 'owner_' || generate_series(1,2500000) || '@mail.com';
 
 
--- the quelly to checktime execution
+-- the query to checktime execution
 explain analyze SELECT COUNT(*) FROM visits where animals_id = 4;
 
 
--- the quelly to deacrease time firts i creacted the index 
+-- the query to deacrease time firts i creacted the index 
 EXPLAIN ANALYZE SELECT COUNT(*) FROM visits where animals_id = 4;
 CREATE INDEX animals_animals_id_desc ON visits(animals_id DESC);
 
+
+-- the queries to improve execution time.
 CREATE INDEX vet_index ON visits(vet_id);
 explain analyze SELECT * FROM visits
 WHERE vet_id = 2;
