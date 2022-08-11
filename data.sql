@@ -68,7 +68,7 @@ UPDATE animals SET owner_id = 'Dean Winchester' WHERE name = 'Boarmon';
 
 
 
------OWNERS TABLE-----
+----OWNERS TABLE-----
 INSERT INTO owner ( ID, Full_name, Age )
 VALUES ( 1, 'Sam Smith', 34 );
 
@@ -79,10 +79,10 @@ INSERT INTO owner ( ID, Full_name, Age )
 VALUES ( 3, 'Bob', 45 );
 
 INSERT INTO owner ( ID, Full_name, Age )
-VALUES ( 4, 'Melody Pond', 77 );
+VALUES ( 5, 'Dean Winchester', 14 );
 
 INSERT INTO owner ( ID, Full_name, Age )
-VALUES ( 5, 'Dean Winchester', 14 );
+VALUES ( 4, 'Melody Pond', 77 );
 
 INSERT INTO owner ( ID, Full_name, Age )
 VALUES ( 6, 'Jodie Whittaker', 38 );
