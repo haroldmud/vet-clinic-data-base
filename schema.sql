@@ -48,7 +48,7 @@ EXPLAIN ANALYZE SELECT COUNT(*) FROM visits where animals_id = 4;
 CREATE INDEX animals_animals_id_desc ON visits(animals_id DESC);
 
 
--- the queries to improve execution time.
+-- here are the queries to improve execution time.
 CREATE INDEX vet_index ON visits(vet_id);
 explain analyze SELECT * FROM visits
 WHERE vet_id = 2;
