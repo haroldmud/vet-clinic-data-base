@@ -1,4 +1,4 @@
------ANIMALS TABLE-----
+----ANIMALS TABLE----
 CREATE TABLE animals ( ID int, Name varchar(100), Date_of_birth date, Escape_attempts int, Neutered boolean, Weight_kg decimal );
 
 ALTER TABLE animals DROP COLUMN ID; -----> deletes a specific column(ID)
@@ -11,7 +11,7 @@ ALTER TABLE species  ADD CONSTRAINT ID INT FOREIGN KEY ( name ) REFERENCES anima
 ALTER TABLE owner  ADD CONSTRAINT ID INT FOREIGN KEY ( full_name ) REFERENCES animals(owner_id);
 
 
------OWNER TABLE----
+----OWNER TABLE----
 CREATE TABLE owner ( ID int, Full_name varchar(100), Age int, PRIMARY KEY (ID)  );
 
 -----SPICIES TABLE-----
