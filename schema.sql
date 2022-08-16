@@ -43,7 +43,7 @@ insert into owners (full_name, email) select 'Owner ' || generate_series(1,25000
 explain analyze SELECT COUNT(*) FROM visits where animals_id = 4;
 
 
--- the query to deacrease time firts i creacted the index 
+-- the query to deacrease time firts we creacted the index 
 EXPLAIN ANALYZE SELECT COUNT(*) FROM visits where animals_id = 4;
 CREATE INDEX animals_animals_id_desc ON visits(animals_id DESC);
 
